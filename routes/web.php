@@ -79,6 +79,7 @@ Route::middleware(['auth'])->group(function () {
         // Assign middleware called "is_admin" to them
         // Put one Route Group code line here below
 
+
     Route::middleware(['is_admin'])->prefix('/admin')->group(function () {
         Route::get('dashboard', AdminDashboardController::class);
         Route::get('/stats', StatsController::class)->name("stats");
